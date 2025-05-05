@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device width, initial-scale=1.0">
+  <title>Portfolio - Josefina Funes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Overlay para cerrar menú al hacer clic fuera -->
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Header -->
+  <header>
+    <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+    <div class="menu" id="menu">
+      <a onclick="toggleMenu()" href="index.html">HOME</a>
+      <a onclick="toggleMenu()" href="aboutme.html">ABOUT ME</a>
+      <a onclick="toggleMenu()" href="Proyectos.html">PROYECTOS</a> <!-- A Proyectos.html -->
+      <a onclick="toggleMenu()" href="contacto.html">CONTACTO</a>
+    </div>
+  </header>
+
+  <!-- Logo -->
+  <div class="logo">
+    <img src="Imagenes/Logo.png" alt="JF">
+    <h2>Diseños con vitalidad y frescura</small>
+  </div>
+
+  <!-- Servicios -->
+  <div class="services">
+    <h1>SERVICIOS</h1>
+    <div class="service-grid">
+      <div class="service-item">
+        <img src="Imagenes/Recurso 4.png" alt="Branding & Identidad">
+        <h3>Branding & Identidad</h3>
+      </div>
+      <div class="service-item">
+        <img src="Imagenes/Recurso 5.png" alt="Diseño Editorial">
+        <h3>Diseño Editorial</h3>
+      </div>
+      <div class="service-item">
+        <img src="Imagenes/Recurso 6.png" alt="Ilustración">
+        <h3>Ilustración</h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Proyectos  -->
+  <div class="projects-preview">
+    <h1>PROYECTOS</h1>
+    <div class="slider-contenedor">
+    <div class="slider">
+      <div class="slide">
+        <div class="project" style="background-image: url('Imagenes/Kit\ wireframe.png');">
+        <h3>Revista KIT</h3>
+        <p>Diseño de revista.</p>
+        <a href="#" class="button">Más información</a>
+        </div>
+        <div class="project" style="background-image: url('Imagenes/onda.png');">
+        <h3>Onda Shop</h3>
+        <p>Branding y aplicaciones.</p>
+        <a href="#" class="button">Más información</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <div class="project" style="background-image: url('Imagenes/sirena.png');">
+        <h3>La locura de la sirena</h3>
+        <p>Diseño de libros.</p>
+        <a href="#" class="button">Más información</a>
+        </div>
+        <div class="project" style="background-image: url('Imagenes/teatro.png');">
+        <h3>Teatro Roberto Durán</h3>
+        <p>Diseño Multimedial.</p>
+        <a href="#" class="button">Más información</a>
+        </div>
+      </div>
+    </div>
+      <button class="boton-anterior">Anterior</button>
+      <button class="boton-siguiente">Siguiente</button>
+    </div>
+  </div>
+
+  <footer class="contact">
+    <p><strong>Teléfono</strong><br>11 2727 2316</p>
+    <p><strong>Email</strong><br>jofunes2003@gmail.com</p>
+    <p><strong>Instagram</strong><br>@jofu.graphicdesign</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      const overlay = document.getElementById('overlay');
+      menu.classList.toggle('open');
+      overlay.classList.toggle('show');
+    }
+  </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sliderContenedor = document.querySelector('.slider-contenedor');
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const botonAnterior = document.querySelector('.boton-anterior');
+    const botonSiguiente = document.querySelector('.boton-siguiente');
+ 
+    let indiceActual = 0;
+    const numSlides = slides.length;
+ 
+    function actualizarSlider() {
+      slider.style.transform = `translateX(-${indiceActual * 100}vw)`;
+      actualizarBotones();
+    }
+ 
+    function actualizarBotones() {
+      botonAnterior.disabled = indiceActual === 0;
+      botonSiguiente.disabled = indiceActual === numSlides - 1;
+    }
+ 
+    botonAnterior.addEventListener('click', function() {
+      if (indiceActual > 0) {
+        indiceActual--;
+        actualizarSlider();
+      }
+    });
+ 
+    botonSiguiente.addEventListener('click', function() {
+      if (indiceActual < numSlides - 1) {
+        indiceActual++;
+        actualizarSlider();
+      }
+    });
+ 
+    // Inicializar el slider
+    actualizarSlider();
+});
+</script>
+
+</body>
+</html>
+

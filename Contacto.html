@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device width, initial-scale=1.0">
+  <title>Contacto - Josefina Funes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <!-- Overlay para cerrar menú al hacer clic fuera -->
+ <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+ <!-- Header -->
+ <header>
+   <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+   <div class="menu" id="menu">
+     <a onclick="toggleMenu()" href="index.html">HOME</a>
+     <a onclick="toggleMenu()" href="aboutme.html">ABOUT ME</a>
+     <a onclick="toggleMenu()" href="Proyectos.html">PROYECTOS</a> <!-- A Proyectos.html -->
+     <a onclick="toggleMenu()" href="contacto.html">CONTACTO</a>
+   </div>
+ </header>
+
+  <div class="contacto-page">
+    <h1>Contacto</h1>
+    <div class="contacto-grid">
+      <div class="Telefono">
+        <h2>Teléfono</h2>
+        <p>+54 9 11 1234 5678</p>
+      </div>
+      <div class="Email">
+        <h2>Email</h2>
+        <p>jofunes2003@gmail.com</p>
+      </div>
+      <div class="Instagram">
+        <h2>Instagram</h2>
+        <p>@jofu.graphicdesign</p>  
+    </div>
+  </div>
+
+  <div class="JF">
+    <a href="index.html">
+      <img src="Imagenes/Logo.png" alt="Jofu Graphic Design">
+    </a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      const overlay = document.getElementById('overlay');
+      menu.classList.toggle('open');
+      overlay.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>

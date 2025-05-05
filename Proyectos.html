@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device width, initial-scale=1.0">
+  <title>Proyectos - Josefina Funes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <!-- Header -->
+  <header>
+    <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+    <div class="menu" id="menu">
+      <a onclick="toggleMenu()" href="index.html">HOME</a>
+      <a onclick="toggleMenu()" href="aboutme.html">ABOUT ME</a>
+      <a onclick="toggleMenu()" href="Proyectos.html">PROYECTOS</a> <!-- Redirige a proyectos.html -->
+      <a onclick="toggleMenu()" href="contacto.html">CONTACTO</a>
+    </div>
+  </header>
+
+  <!-- Overlay para cerrar menú al hacer clic fuera -->
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+ <!-- Proyectos  -->
+ <div class="projects-preview">
+  <h1>PROYECTOS</h1>
+  <div class="project-grid">
+    <div class="project" style="background-image: url('Imagenes/Kit\ wireframe.png');">
+      <h3>Revista KIT</h3>
+      <p>Diseño de revista.</p>
+      <a href="#" class="button">Más información</a>
+    </div>
+    <div class="project" style="background-image: url('Imagenes/onda.png');">
+      <h3>Onda Shop</h3>
+      <p>Branding y aplicaciones.</p>
+      <a href="#" class="button">Más información</a>
+    </div>
+    <div class="project" style="background-image: url('Imagenes/sirena.png');">
+      <h3>La locura de la sirena</h3>
+      <p>Diseño de libros.</p>
+      <a href="#" class="button">Más información</a>
+    </div>
+    <div class="project" style="background-image: url('Imagenes/teatro.png');">
+      <h3>Teatro Roberto Durán</h3>
+      <p>Diseño Multimedial.</p>
+      <a href="#" class="button">Más información</a>
+    </div>
+  </div>
+</div>
+
+
+  <footer class="contact">
+    <p><strong>Teléfono</strong><br>11 2727 2316</p>
+    <p><strong>Email</strong><br>jofunes2003@gmail.com</p>
+    <p><strong>Instagram</strong><br>@jofu.graphicdesign</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      const overlay = document.getElementById('overlay');
+      menu.classList.toggle('open');
+      overlay.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>

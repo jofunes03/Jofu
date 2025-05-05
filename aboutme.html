@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device width, initial-scale=1.0">
+  <title>About Me - Josefina Funes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <!-- Header -->
+  <header>
+    <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+    <div class="menu" id="menu">
+      <a onclick="toggleMenu()" href="index.html">HOME</a>
+      <a onclick="toggleMenu()" href="aboutme.html">ABOUT ME</a>
+      <a onclick="toggleMenu()" href="Proyectos.html">PROYECTOS</a>
+      <a onclick="toggleMenu()" href="contacto.html">CONTACTO</a>
+    </div>
+  </header>
+
+  <!-- Overlay para cerrar menú al hacer clic fuera -->
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <!-- About Me Section -->
+  <section class="about-me">
+    <div class="about-me-foto">
+      <img src="Imagenes/yo.jpeg" alt="Foto de Josefina Funes">
+    </div>
+    <div class="about-me-texto">
+      <h1>Soy Josefina Funes, y tengo mucha energía.</h1>
+      <p>Tengo un motor adentro, y una fascinación constante con todo lo que me rodea. Colecto muchos hobbies y materiales como pintura, papeles, retazos de tela, y revistas. Esta es una de mis más grandes fortalezas: esta vitalidad que tengo, el zumbido adentro mío que quiere crear todo el tiempo.
+        Te invito a contactarme si te interesa mi trabajo y si querés que trabajemos juntos. Siempre estoy abierta a nuevos desafíos y proyectos creativos.
+      </p>
+    </div>
+  </section>
+
+  <!-- Nueva imagen debajo de la sección "About Me" -->
+  <div class="about-me-extra-image">
+    <img src="Imagenes/Recurso 15.png" alt="Imagen adicional sobre Josefina Funes">
+  </div>
+
+  <footer class="contact">
+    <p><strong>Teléfono</strong><br>11 2727 2316</p>
+    <p><strong>Email</strong><br>jofunes2003@gmail.com</p>
+    <p><strong>Instagram</strong><br>@jofu.graphicdesign</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      const overlay = document.getElementById('overlay');
+      menu.classList.toggle('open');
+      overlay.classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
