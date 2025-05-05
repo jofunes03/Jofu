@@ -200,7 +200,6 @@ body {
  
 .slide {
   flex: 0 0 100vw; /* No crecer ni encoger, ancho del viewport */
-  height: 400px; /* Altura deseada para los slides */
   display: flex;
   justify-content: center;
   align-items: center;
