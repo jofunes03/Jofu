@@ -397,7 +397,6 @@ body {
 
   .projects-preview div {
     flex-direction: row; /* Proyectos horizontal */
-    height: 40vh;
     gap: 3%;
   }
 
