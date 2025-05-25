@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device width, initial-scale=1.0">
+  <title>respuesta - Josefina Funes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <!-- Overlay para cerrar menú al hacer clic fuera -->
+ <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+  
+ <!-- Header -->
+ <header>
+  <span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+  <div class="menu" id="menu">
+    <a onclick="toggleMenu()" href="index.html">HOME</a>
+    <a onclick="toggleMenu()" href="aboutme.html">ABOUT ME</a> <!-- A aboutme.html -->
+    <a onclick="toggleMenu()" href="Proyectos.html">PROYECTOS</a> <!-- A Proyectos.html -->
+    <a onclick="toggleMenu()" href="Contacto.html">CONTACTO</a> <!-- A Contacto.html -->
+  </div>
+ </header>
+
+ <div class="gracias" id="gracias">
+    <a href="index.html">Muchas Gracias</a>
+ </div>
+
+
+ <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      const overlay = document.getElementById('overlay');
+      menu.classList.toggle('open');
+      overlay.classList.toggle('show');
+    }
+  </script>
+
+</body>

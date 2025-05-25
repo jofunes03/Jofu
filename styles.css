@@ -34,6 +34,8 @@ body {
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
   z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+
 }
 
 .menu.open {
@@ -88,14 +90,13 @@ body {
 }
 
 .services {
-  background: none;
+  background: #9ebda5;
   margin: 0; 
-  padding: 0; 
+  padding-bottom: 40px;
   border-radius: 0; 
   box-shadow: none;
   text-align: center;
   margin-bottom: 40px;
-  height: 90vh;
   display: flex;
   flex-direction: column;
   row-gap: 20px;
@@ -120,14 +121,27 @@ body {
 .service-grid {
   display: flex;
   flex-direction: row; 
-  gap: 200px;
+  gap: 100px;
   align-items: center;
 }
 
 .service-item {
   display: flex;
   flex-direction: column; 
+width: 100%;
   text-align: center; 
+  border: 2px solid #f4e1a1; /* Borde amarillo */
+  background-color: rgba(244, 225, 161, 0.3); /* Fondo amarillo semitransparente */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centra el contenido */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+.service-item:hover {
+  transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el mouse */
 }
 
 .service-item img {
@@ -187,13 +201,16 @@ body {
 
 .slider-contenedor {
   position: relative; /* Para posicionar los botones dentro */
-  width: 100vw; /* Ancho del viewport */
+  width: 95vw; /* Ancho del viewport */
+  margin: auto;
   overflow: hidden; /* Oculta el contenido que se sale del contenedor */
+  border-radius: 10px;
 }
  
 .slider {
   display: flex;
-  width: 100%; /* Inicialmente al 100%, se ajustará con JS */
+  gap: 20px;
+  width: 98%; /* Inicialmente al 100%, se ajustará con JS */
   scroll-snap-type: x mandatory; /* Activa el "snap" horizontal obligatorio */
   scroll-behavior: smooth; /* Para el desplazamiento suave controlado por JS */
 }
@@ -205,7 +222,6 @@ body {
   align-items: center;
   font-size: 2em;
   color: white;
-  background-color: #333; /* Color de fondo predeterminado */
   scroll-snap-align: start; /* El inicio del slide se alinea con el inicio del contenedor */
   box-sizing: border-box; /* Incluye padding y border en el ancho */
 }
@@ -347,6 +363,134 @@ body {
   border-radius: 10px;
 }
 
+/* Estilo para el formulario de contacto */
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 30px auto;
+  margin-top: 70px;
+  background-color: #f4e1a1;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+.contacto-form h2 {
+  font-family: 'futura', sans-serif;
+  color: #da6567;
+  margin-bottom: 20px;
+}
+
+.contacto-form .form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.contacto-form label {
+  font-family: 'futura', sans-serif;
+  color: #da6567;
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #da6567;
+  border-radius: 5px;
+  font-family: 'futura', sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  outline: none;
+  border-color: #f4e1a1;
+  background-color: #fdf7e6;
+}
+
+.contacto-form button {
+  padding: 10px 20px;
+  background-color: #da6567;
+  color: #f4e1a1;
+  font-family: 'futura', sans-serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contacto-form button:hover {
+  background-color: #f4e1a1;
+  color: #da6567;
+}
+
+.form-group p {
+  font-family: 'futura', sans-serif;
+  color: #da6567;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.gracias {
+  background-image: url('Imagenes/Recurso\ 1.png'); /* Ruta de la imagen de fondo */
+  background-size: cover; /* Asegura que la imagen cubra toda el área */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-attachment: fixed; /* Hace que la imagen no se mueva al hacer scroll */margin: 0;
+  
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  font-family: 'futura', sans-serif; /* Aplica la fuente futura */
+  font-size: 3rem; /* Tamaño del texto */
+  text-align: center;
+  padding: 20px 40px;
+   /* Sombra para destacar el texto */
+}
+
+.gracias a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: #da6567; /* Color del texto */
+  font-family: 'futura', sans-serif; /* Fuente futura */
+  padding: 10px 20px; /* Espaciado interno */
+  border: 2px solid #da6567; /* Borde del recuadro */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: rgba(244, 225, 161, 0.9); /* Fondo semitransparente */
+  display: inline-block; /* Asegura que se comporte como un botón */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gracias a:hover {
+  background-color: #da6567; /* Cambia el fondo al pasar el mouse */
+  color: #891F2F; /* Cambia el color del texto al pasar el mouse */
+}
+
+.anuncio-externo{
+  width:728px;
+  height:90px;
+  border:none;
+  display:block;
+  margin:0 auto;
+}
+.contenedor-anuncio-externo{
+  display:flex;
+  justify-content:center;
+  padding:30px 0;
+}
+
+
 /* Celular */
 @media (max-width: 768px) {
 
@@ -380,6 +524,13 @@ body {
     padding: 20px;
     margin-top: 60px;
   }
+
+  .anuncio-externo{
+    width:300px;
+    height:600px;
+  }
+
+
 }
 
 
@@ -411,10 +562,14 @@ body {
     align-items: center; /* Centra los elementos verticalmente */
   }
 
-
   .project {
     height: auto; /* Ajusta la altura automáticamente */
     border-radius: 8px;
     width: 100%; /* Asegura que cada proyecto ocupe el ancho de su celda */
+  }
+
+  .marcoanuncio {
+    width: 728px;
+    height: 90px;
   }
 }

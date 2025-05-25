@@ -9,6 +9,8 @@
 <body>
  <!-- Overlay para cerrar menú al hacer clic fuera -->
  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+  
+  
 
  <!-- Header -->
  <header>
@@ -20,6 +22,25 @@
     <a onclick="toggleMenu()" href="Contacto.html">CONTACTO</a> <!-- A Contacto.html -->
   </div>
  </header>
+
+ <div class="contacto-form">
+  <h2>Envíame un mensaje</h2>
+  <form action="respuesta.html" method="POST">
+    <div class="form-group">
+      <p>Nombre y Apellido<input type="text" name="nombre" required placeholder="Tu nombre" required></p>
+    </div>
+    <div class="form-group">
+      <p>Correo Electrónico<input type="text" name="email" required placeholder="Tu correo electrónico"></p>
+    </div>
+    <div class="form-group">
+      <p>Asunto<input type="text" name="subject" placeholder="Asunto del mensaje" required></p>
+    </div>
+    <div class="form-group">
+      <p>Mensaje<textarea name="message" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea> </p>
+    </div>
+    <button type="submit" class="btn">Enviar</button>
+  </form>
+ </div>
 
   <div class="contacto-page">
     <h1>Contacto</h1>
