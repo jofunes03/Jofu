@@ -25,10 +25,12 @@
  <!-- Proyectos  -->
  <div class="projects-preview">
   <h1>PROYECTOS</h1>
- </div>
+</div>
 
- <!-- Lightbox Gallery -->
- <div class="lightbox-gallery">
+
+<!-- Lightbox Gallery -->
+
+<div class="lightbox-gallery">
   <div class="gallery-item">
     <img src="Imagenes/onda.png" alt="Imagen 1" onclick="openLightbox(this.src)">
   </div>
@@ -48,26 +50,34 @@
     <img src="Imagenes/lightbox imagenes-09.png" alt="Imagen 2" onclick="openLightbox(this.src)">
   </div>
   <div class="gallery-item">
-    <img src="Imagenes/M3 Señalética.jpeg" alt="Imagen 3" onclick="openLightbox(this.src)">
+    <img src="Imagenes/M3 Señalética.jpeg" alt="Imagen 3" onclick="openLightbox(this.src)">
   </div>
   <div class="gallery-item">
     <img src="Imagenes/jf.png" alt="Imagen 4" onclick="openLightbox(this.src)">
   </div>
+
 </div>
+
+
 
 <!-- Lightbox Overlay -->
+
 <div id="lightbox-overlay" class="lightbox-overlay" onclick="closeLightbox()">
+
   <img id="lightbox-image" src="" alt="Imagen ampliada">
+
 </div>
 
-  <footer class="contact">
+
+
+
+<footer class="contact">
     <p><strong>Teléfono</strong><br>11 2727 2316</p>
     <p><strong>Email</strong><br>jofunes2003@gmail.com</p>
     <p><strong>Instagram</strong><br>@jofu.graphicdesign</p>
-  </footer>
+</footer>
 
-
-  <script>
+<script>
     function toggleMenu() {
       const menu = document.getElementById('menu');
       const overlay = document.getElementById('overlay');
